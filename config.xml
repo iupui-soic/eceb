@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.hello" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Eceb</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="snuthakk@iupui.edu" href="https://www.iupui.edu/">IUPUI Team</author>
+<widget android-versionCode="10" id="edu.iupui.soic.bhi.plhi.mhbs.eceb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>mHBS-ECEB</name>
+    <description>mHBS - Essential Care for Every Baby App</description>
+    <author email="plhi@iupui.edu" href="https://www.iupui.edu/~plhi">IUPUI Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -79,7 +79,7 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^2.4.0" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
