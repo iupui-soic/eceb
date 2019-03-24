@@ -18,6 +18,78 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){
+            var a = localStorage.getItem("flag6");
+            if (a == "true")
+            {
+                document.getElementById("NormalTemp").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("NormalTemp").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag7");
+            if (a == "true")
+            {
+                document.getElementById("Breastfeeding").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("Breastfeeding").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag8");
+            if (a == "true")
+            {
+                document.getElementById("AdviceOnBreastFeeding").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("AdviceOnBreastFeeding").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag9");
+            if (a == "true")
+            {
+                document.getElementById("Immunize").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("Immunize").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag10");
+            if (a == "true")
+            {
+                document.getElementById("BabyForDischarge").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("BabyForDischarge").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag11");
+            if (a == "true")
+            {
+                document.getElementById("HomeCare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("HomeCare").checked = false;
+                //alert("unchecked!");
+            }
             var x = setInterval(function() {
                 var list = JSON.parse(window.localStorage.getItem('babieslist'));
                 var item = window.localStorage.getItem("cookie");
@@ -106,7 +178,7 @@
                             <!-- Single chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="NormalTemp">
+                                    <input type="checkbox" name="my-checkbox" id="NormalTemp" onchange="localStorage.setItem('flag6',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -118,7 +190,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="Breastfeeding">
+                                    <input type="checkbox" name="my-checkbox" id="Breastfeeding" onchange="localStorage.setItem('flag7',this.checked)">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -130,7 +202,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="AdviceOnBreastFeeding">
+                                    <input type="checkbox" name="my-checkbox" id="AdviceOnBreastFeeding" onchange="localStorage.setItem('flag8',this.checked)">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -143,7 +215,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="Immunize">
+                                    <input type="checkbox" name="my-checkbox" id="Immunize"onchange="localStorage.setItem('flag9',this.checked);" >
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -155,7 +227,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="BabyForDischarge">
+                                    <input type="checkbox" name="my-checkbox" id="BabyForDischarge" onchange="localStorage.setItem('flag10',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -167,7 +239,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="HomeCare">
+                                    <input type="checkbox" name="my-checkbox" id="HomeCare"onchange="localStorage.setItem('flag11',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>

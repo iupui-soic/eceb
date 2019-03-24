@@ -17,6 +17,42 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){
+            var a = localStorage.getItem("flag3");
+            if (a == "true")
+            {
+                document.getElementById("Eyecare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("Eyecare").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag4");
+            if (a == "true")
+            {
+                document.getElementById("Cordcare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("Cordcare").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag5");
+            if (a == "true")
+            {
+                document.getElementById("VitaminK").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("VitaminK").checked = false;
+                //alert("unchecked!");
+            }
             var x = setInterval(function() {
                 var list = JSON.parse(window.localStorage.getItem('babieslist'));
                 var item = window.localStorage.getItem("cookie");
@@ -103,7 +139,7 @@
                             <!-- Single chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="Eyecare">
+                                    <input type="checkbox" name="my-checkbox" id="Eyecare" onchange="localStorage.setItem('flag3',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -115,7 +151,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="Cordcare">
+                                    <input type="checkbox" name="my-checkbox" id="Cordcare"onchange="localStorage.setItem('flag4',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -127,7 +163,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" id="VitaminK">
+                                    <input type="checkbox" name="my-checkbox" id="VitaminK"onchange="localStorage.setItem('flag5',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -161,7 +197,7 @@
                                     <div class="item-inner">
                                         <div class="item-title label">Temperature</div>
                                         <div class="item-input">
-                                            <input type="text" placeholder="Temperature" id="temperature">
+                                            <input type="text" placeholder="Temperature" id="temperature";>
                                         </div>
                                     </div>
                                 </div>

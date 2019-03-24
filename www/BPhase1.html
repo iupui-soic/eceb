@@ -17,6 +17,42 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){
+            var a = localStorage.getItem("flag");
+            if (a == "true")
+            {
+              document.getElementById("skinToSkin").checked = true;
+               // alert("checked!");
+            //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("skinToSkin").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag1");
+            if (a == "true")
+            {
+                document.getElementById("Breathing").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("Breathing").checked = false;
+                //alert("unchecked!");
+            }
+            var a = localStorage.getItem("flag2");
+            if (a == "true")
+            {
+                document.getElementById("breastFeeding").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("breastFeeding").checked = false;
+                //alert("unchecked!");
+            }
             var x = setInterval(function() {
                 var list = JSON.parse(window.localStorage.getItem('babieslist'));
                 var item = window.localStorage.getItem("cookie");
@@ -97,10 +133,11 @@
                             </li>
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" value="Skin-to-skin" id="skinToSkin">
+                                    <input type="checkbox" name="my-checkbox" value="Skin-to-skin" id="skinToSkin" onchange="localStorage.setItem('flag',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
+
                                     <div class="item-inner">
                                         <div class="item-title" >Skin-to-skin care</div>
                                     </div>
@@ -109,7 +146,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" value="Breathing" id="Breathing">
+                                    <input type="checkbox" name="my-checkbox" value="Breathing" id="Breathing"onchange="localStorage.setItem('flag1',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -121,7 +158,7 @@
                             <!-- Another chekbox item -->
                             <li>
                                 <label class="label-checkbox item-content">
-                                    <input type="checkbox" name="my-checkbox" value="Breastfeeding" id="breastFeeding" >
+                                    <input type="checkbox" name="my-checkbox" value="Breastfeeding" id="breastFeeding" onchange="localStorage.setItem('flag2',this.checked);">
                                     <div class="item-media">
                                         <i class="icon icon-form-checkbox"></i>
                                     </div>
@@ -145,5 +182,16 @@
 <script type="text/javascript" src="js/framework7.min.js"></script>
 <!-- Path to your app js-->
 <script type="text/javascript" src="js/my-app.js"></script>
+<script>
+    function check3()
+    {
+        //alert("hey");
+        //alert(document.getElementById("skinToSkin").checked);
+        localStorage.setItem("flag",document.getElementById("skinToSkin").checked);
+        //alert();
+        //alert(typeof localStorage.getItem("flag"));
+        //local;
+    }
+</script>
 </body>
 </html>
