@@ -873,7 +873,18 @@ function submit() {
     }
     window.localStorage.setItem('final', JSON.stringify(final));
 
+function check() {
+   // if(document.getElementById("skinToSkin").checked==false)
+       // planhide();
+    alert(hello);
 }
+
+    
+
+
+}
+
+
 
 
 //var all = [babies, babiesdetails, babiesdetails1, normaldetails, abnormaldetails, underwtdetails, poorfeedingdetails, dangersigndetails];

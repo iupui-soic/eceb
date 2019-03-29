@@ -19,6 +19,18 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function(){
+            var a = localStorage.getItem("flag13");
+            if (a == "true")
+            {
+                document.getElementById("ThermalCare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("ThermalCare").checked = false;
+                //alert("unchecked!");
+            }
             var x = setInterval(function() {
                 var list = JSON.parse(window.localStorage.getItem('babieslist'));
                 var item = window.localStorage.getItem("cookie");
@@ -44,6 +56,18 @@
     </script>
     <script>
         $(document).ready(function(){
+            var a = localStorage.getItem("flag13");
+            if (a == "true")
+            {
+                document.getElementById("ThermalCare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("ThermalCare").checked = false;
+                //alert("unchecked!");
+            }
             var list = JSON.parse(window.localStorage.getItem("babieslist"));
             var item = window.localStorage.getItem("cookie");
             $("#name").append('Baby of '+list[item].mother_name);
@@ -59,6 +83,19 @@
     </script>
     <script>
         function toggle() {
+            var a = localStorage.getItem("flag13");
+            if (a == "true")
+            {
+                document.getElementById("ThermalCare").checked = true;
+                // alert("checked!");
+                //    alert(localStorage.getItem("flag"));
+            }
+            else if (a === "false")
+            {
+                document.getElementById("ThermalCare").checked = false;
+                //alert("unchecked!");
+            }
+
             if (document.getElementById("NormalTemperature").checked === true) {
                 $('.continued2').hide();
                 $('#normal').show();
@@ -231,7 +268,7 @@
                             <div class="continuedsupport">
                                 <li>
                                     <label class="label-radio item-content" >
-                                        <input type="radio" name="my-radio" id="ContinuedThermalSupport" onchange="toggle()">
+                                        <input type="radio" name="my-radio" id="ContinuedThermalSupport" onchange="toggle(localStorage.setItem('flag13',this.checked);">
                                         <div class="item-media">
                                             <i class="icon icon-form-radio"></i>
                                         </div>
